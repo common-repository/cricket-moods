@@ -1,0 +1,76 @@
+=== Cricket Moods Changelog ===
+
+20081211: Version 3.7.2
+* Psuedo-Fix a few path problems (cuz I'm dumb).
+
+20081009: Version 3.7.1
+* Mood selection on the write page is now on the sidebar.
+* A few backend things that no one will notice.
+* Requires WP 2.6 now, because I'm lazy.
+
+20081007: Version 3.7
+* Various changes for WPMU compatibility.
+* Fix for duplicate mood issue. Props to Alex King.
+
+20070829: Version 3.6
+* Now fails silently if the mood image directory does not exist.
+* Fixed a silly omission in cm_list_mood_images for the manage and admin panels.
+* Fix for a possible problem in the manage and admin panels that may cause some mood images to not display.
+* Tried to beef up security by adding nonce and capabilities checks in various places.
+* Switched out my broken JS for jquery.
+* The blank mood lines will now update their mood images properly.
+* Added a warning if the selected mood image directory is not readable.
+
+20070323: Version 3.5
+* Removed redundant cm_update_post_moods action hook (this may make it incompatible with WP < 2.1.2).
+* Added sanity check to make sure that moods were supposed to be POSTed before trying to act on those moods (thanks Jana! <jana@janasjibberish.com>).
+* Sanitized the output of the Image Directory on the options panel.
+
+20070316: Version 3.4
+* The plugin is now translatable.  The POT file can be found in the subversion repository.
+* Added a German translation thanks to Michael Biech <MichaelBiech@web.de>.
+* Starting with 3.4, all new versions will be licensed under the GPL.
+* Available mood icons are now always shown in the manage and option pages.
+
+20070105: Version 3.3
+* Dirty fix for people still having issues (maybe?).
+* Added buttons to reset both personal and the global mood lists.
+* Added buttons to strip moods from per-user and all-user posts.
+* Added an option to specify whether the moods should be placed above or below the content.
+
+20061216: Version 3.2
+* Fix for recent issues with updating per-user mood lists in WordPress 2.0.5.
+
+20060628: Version 3.1
+* Made it automatically adjust the initial mood image direcory if WordPress is not installed in the root of the domain.
+
+20060220: Version 3.0
+* Fixed major bug causing a general metadata failure with other plugins.
+* Added per-user moods capability.
+* Personal moods will henceforth be editable only by using the "Manage" admin panel.
+* Plugin _requires_ Wordpress 2.0.1 or greater because:
+* Mood list now displayed in the collapsable sidebar with the other "Write Post" options.
+* Bug fixes.
+
+20050829: Version 2.0
+* Switched to a two digit versioning system to coincide with the wp-plugins.net system.
+* Added an options panel that lets authorized users change options and add, modify, and delete moods.
+* Added an option to have the moods automatically printed after the_time().
+* Added an extra page that displays all images in the "Mood Image Directory."
+
+20050824: Version 1.1.1, 1.0.2
+* Bug fix: the 'before' parameter of cm_the_moods() appeared before *every* mood instead of just the first one. Thanks to Chinky Jew <chinkyjew[at]gmail> for catching that.
+* Added HTML comment to admin styles.
+
+20050629: Version 1.1.0
+* Modified cm_update_moods to use WP's builtin meta functions.
+* Modified cm_get_post_moods to use WP's get_post_meta.
+* Moved the mood list to WP's option system.  Mucking about in the database is no longer necessary.
+* Added an installer function that adds the inital mood list (if it doesn't already exist) or upgrades the old moods table on plugin activation.
+* Modifying documentation to be wp-plugins.org compliant.
+
+20050504: Version 1.0.1
+* Minor cosmetic modifications.
+
+20050504: Version 1.0.0
+* Intitial release.
